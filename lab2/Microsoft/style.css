@@ -1,0 +1,183 @@
+/* GENERAL */
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+    .container {
+        max-width: 1260px;
+        margin: 0 auto;
+        height: 100%;
+      }
+
+body{
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Navigation */
+header {
+    
+}
+.header-top {
+    display: flex;
+    flex-flow:row nowrap ;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.links-block {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Отступы между блоками */
+}
+
+  .menu {
+    
+    list-style: none;
+    list-style-type: none;
+  }
+  .menu > li {
+    display: inline;
+    
+    margin-left: 37.5px;
+    font-size: 15px;
+    min-width: 320px;
+    color: #000;
+    background-color: #fff;
+  }
+  .logo {
+    width: 108px;
+    display: inline-block;
+    margin: 1px;
+    padding: 12px 4px;
+    
+  }
+  
+  .menu > li> img{
+    width: 30px;
+
+  }
+
+
+  .header-text-part{
+    
+  }
+  .header-body{
+    
+  }
+  .header-body {
+  
+    
+    background-image: url("header-bottom-image.jpg"); /* Указываем путь к изображению */
+    background-size: cover; /* Масштабирует изображение по всей области */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение */
+    height: 400px; /* Можно задать высоту */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
+  }
+  .header-body > .header-text-part > h6 {
+    font-weight: 600;
+    font-size: 35px; 
+    padding-bottom: 20px; 
+    }
+  .header-body > .header-buttons >.button{
+    background-color: #000;
+    border-radius: 0%;
+    margin-top: 20px; 
+  }
+/* BODY */
+
+
+/* Card */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row nowrap;
+    gap: 20px; 
+    padding: 20px;
+}
+
+/* Оформление карточки */
+.card {
+    width: 300px;
+    background: #f9f9f9;
+ 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   
+    text-align: center;
+    transition: transform 0.3s ease-in-out
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-text{
+  padding: 15px;
+}
+/* Изображение в карточке */
+.card img {
+    width: 100%;
+    height: auto;
+    
+}
+
+/* Заголовок карточки */
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Текст карточки */
+.card div {
+    font-size: 0.9rem;
+    
+    margin-bottom: 15px;
+}
+
+/* Кнопка */
+.button {
+    background: #0078d4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+}
+.card .button{
+  
+  
+}
+.button:hover {
+    background: #005a9e;
+}
+
+.card div .button-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #fff;
+}
+.card h2{
+    font-weight: bold;
+}
+/* Медиа-запрос для адаптации под мобильные устройства */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
