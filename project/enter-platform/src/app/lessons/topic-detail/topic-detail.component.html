@@ -1,0 +1,15 @@
+<app-navigation></app-navigation>
+<div class="lesson-page">
+  <h3>{{ topic }}</h3>
+  <p>{{ lessonText }}</p>
+
+  <div class="video-container">
+    <iframe width="560" height="315" 
+            [src]="videoUrl"
+            title="Video lesson"
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+  </div>
+</div>
+<app-footer></app-footer>

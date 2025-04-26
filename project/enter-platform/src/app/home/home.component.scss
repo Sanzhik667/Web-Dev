@@ -1,0 +1,133 @@
+.hero-container {
+  background-image: url('https://www.gov.kz/uploads/2023/9/26/212e74ee9c2cac19d954975d4410a476_original.53524.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный фон */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.highlight {
+  color: #ffe7bb; /* Яркий цвет для выделения */
+}
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Лёгкий фон для раздела */
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: -50px; /* Чтобы сдвинуть карточку наверх */
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: translateY(-10px); /* Эффект подъема при наведении */
+}
+
+.about-card-header {
+  background-color: #c7d9ffb9;
+  color: #333;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+  font-size: 28px;
+}
+
+.about-card-body {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.about-card-body p {
+  margin-bottom: 20px;
+}
+.news-section {
+  background-color: #ffffff; /* Мягкий светлый фон */
+  padding: 50px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h2 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.news-item {
+  background-color: #c7d9ffb9;
+  border-radius: 12px;
+  padding: 25px;
+  width: 48%; /* Уменьшено до 48%, чтобы было пространство между блоками */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.news-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.news-item h3 {
+  color: #333; /* Темно-серый для заголовков */
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.news-item p {
+  color: #666; /* Светло-серый для текста */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.news-item a {
+  color: #007BFF; /* Голубой для ссылок */
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.news-item a:hover {
+  color: #0056b3; /* Темный голубой при наведении */
+}
+
+/* Добавим адаптивность на мобильных */
+@media (max-width: 768px) {
+  .news-item {
+    width: 100%; /* На мобильных устройствах блоки занимают всю ширину */
+  }
+}

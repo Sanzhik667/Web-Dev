@@ -1,0 +1,53 @@
+<div class="login-container">
+  <div class="login-card">
+    <h1 class="logo">ENTer</h1>
+    <p class="subtitle">Подготовка к ЕНТ</p>
+    
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          formControlName="email" 
+          placeholder="Введите ваш email"
+          [class.invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        <div *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched" 
+             class="error-message">
+          Email обязателен
+        </div>
+        <div *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.touched" 
+             class="error-message">
+          Введите корректный email
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input 
+          type="password" 
+          id="password" 
+          formControlName="password" 
+          placeholder="Введите пароль"
+          [class.invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <div *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched" 
+             class="error-message">
+          Пароль обязателен
+        </div>
+      </div>
+
+      <button 
+        type="submit" 
+        class="login-btn"
+        [disabled]="loginForm.invalid || isLoading">
+        {{ isLoading ? 'Загрузка...' : 'Войти' }}
+      </button>
+    </form>
+
+  <div class="footer-links">
+  <!-- Добавляем класс и preventDefault -->
+  <a class="register-link" routerLink="/register" (click)="onRegisterClick($event)">Создать аккаунт</a>
+  <a href="#" class="forgot-password">Забыли пароль?</a>
+</div>
+  </div>
+</div>

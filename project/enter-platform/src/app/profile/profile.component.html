@@ -1,0 +1,63 @@
+<app-navigation></app-navigation>
+<section class="profile-section">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="avatar-container">
+        <img src="https://good.kz/wp-content/uploads/2024/01/Samal_Logo_Keys_splash.webp" alt="User Profile Picture" class="profile-img">
+        <button class="edit-avatar-btn" (click)="changeAvatar()">
+          <i class="fas fa-camera"></i>
+        </button>
+      </div>
+      <h2 class="profile-name">{{ user.name }}</h2>
+      <p class="profile-username">{{ '@' + user.username }}</p>
+      <div class="profile-badges">
+        <span class="badge">⭐ Премиум</span>
+        <span class="badge">🏆 Топ-ученик</span>
+      </div>
+    </div>
+
+    <div class="profile-stats">
+      <div class="stat-item">
+        <span class="stat-value">{{ user.achievements.courses }}</span>
+        <span class="stat-label">Курсов</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">{{ user.achievements.certificates }}</span>
+        <span class="stat-label">Сертификатов</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">{{ user.achievements.tests }}</span>
+        <span class="stat-label">Тестов</span>
+      </div>
+    </div>
+
+    <div class="profile-info">
+      <div class="info-item">
+        <i class="fas fa-birthday-cake"></i>
+        <span>{{ user.age }} лет</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>{{ user.city }}</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-graduation-cap"></i>
+        <span>{{ user.education }}</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-heart"></i>
+        <span>{{ user.interests }}</span>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button class="btn btn-primary" (click)="editProfile()">
+        <i class="fas fa-edit"></i> Редактировать профиль
+      </button>
+      <button class="btn btn-secondary" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i> Выйти
+      </button>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

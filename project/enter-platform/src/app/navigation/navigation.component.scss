@@ -1,0 +1,35 @@
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    background: rgba($dark-blue, 0.9);
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba($beige, 0.1);
+    z-index: 100;
+  
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba($beige, 0.6);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: all 0.3s;
+  
+      i {
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+      }
+  
+      &:hover, &.active {
+        color: $beige;
+      }
+    }
+  }
+  
+  /* Добавляем отступ для контента */
+  .page-container {
+    padding-bottom: 70px; /* Высота навигации + отступ */
+  }

@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>Редактирование профиля</h2>
+
+<mat-dialog-content>
+  <form #profileForm="ngForm" class="edit-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Имя</mat-label>
+      <input matInput name="name" [(ngModel)]="user.name" required minlength="2" #name="ngModel">
+      <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">
+        {{ name.errors?.['required'] ? 'Обязательное поле' : 'Минимум 2 символа' }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Логин</mat-label>
+      <input matInput name="username" [(ngModel)]="user.username" required pattern="^[a-zA-Z0-9_]+$" #username="ngModel">
+      <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+        {{ username.errors?.['required'] ? 'Обязательное поле' : 'Только буквы, цифры и _' }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Возраст</mat-label>
+      <input matInput type="number" name="age" [(ngModel)]="user.age" min="10" max="100" #age="ngModel">
+      <mat-error *ngIf="age.invalid && (age.dirty || age.touched)">
+        Возраст должен быть от 10 до 100
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Город</mat-label>
+      <input matInput name="city" [(ngModel)]="user.city">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Образование</mat-label>
+      <input matInput name="education" [(ngModel)]="user.education">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Интересы</mat-label>
+      <textarea matInput name="interests" [(ngModel)]="user.interests" rows="3"></textarea>
+    </mat-form-field>
+  </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Отмена</button>
+  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="!profileForm.form.valid">
+    Сохранить
+  </button>
+</mat-dialog-actions>
