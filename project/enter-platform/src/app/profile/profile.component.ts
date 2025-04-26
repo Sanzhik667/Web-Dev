@@ -30,13 +30,13 @@ interface User {
 })
 export class ProfileComponent {
   user: User = {
-    name: 'Еркін Самал',
-    username: 'erkin_samal',
-    age: 19,
+    name: 'Ералы Санжар',
+    username: 'Sanzhar',
+    age: 20,
     city: 'Алматы',
     education: 'Kazakh-British Technical University',
-    interests: 'WEB-development, Data Science, Psychology',
-    avatarUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fstudent-cartoon&psig=AOvVaw2tQAvveBqyFCSU4tVa7f2n&ust=1745185806923000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDc1POJ5YwDFQAAAAAdAAAAABAE',
+    interests: 'WEB-developmen',
+    avatarUrl: 'https://www.google.com/url?sa=i&url=htthttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQznaSV1gK1RabnW7veR3B6ABBza4COPq6mFA&sps%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fstudent-cartoon&psig=AOvVaw2tQAvveBqyFCSU4tVa7f2n&ust=1745185806923000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDc1POJ5YwDFQAAAAAdAAAAABAE',
     achievements: {
       courses: 5,
       certificates: 3,
